@@ -81,7 +81,7 @@ mongoimport --db Bugfixes --collection BugPatterns --file <filepath> --jsonArray
 
 # Solve mongodb error (Result: core-dump)
 
-Al consultar el status de mongodb `sudo systemctl enable mongod`
+Al consultar el status de mongodb `sudo systemctl status mongod`
 
 Si se obtiene la salida: Active: failed (Result: core-dump)
 Se debe a la incompatibilidad con la arquitectura del computador donde estamos trabajando.
@@ -133,7 +133,7 @@ sudo apt-get update
 sudo apt-get install mongodb-org=4.4.8 mongodb-org-server=4.4.8 mongodb-org-shell=4.4.8 mongodb-org-mongos=4.4.8 mongodb-org-tools=4.4.8
 ```
 
-- check status mongodb with `sudo systemctl enable mongod`
+- check status mongodb with `sudo systemctl status mongod`
 
 ## Error with mongodb 4.4.8
 
@@ -152,7 +152,7 @@ sudo systemctl status mongod
 ```
 systemctl start mongod
 sudo systemctl enable mongod
-mongoimport --db Bugfixes --collection BugPatterns --file <filepath> --jsonArray
+mongoimport --db Bugfixes --collection BugPatterns --file Descargas/Toolkit_AbinDebugger-main/BugPatterns.json --jsonArray
 ```
 
 # activate environment and open abindebugger
@@ -160,7 +160,7 @@ mongoimport --db Bugfixes --collection BugPatterns --file <filepath> --jsonArray
 ```
 source abindebugger_venv/bin/activate
 cd AbinDebugger
-python3.7 AbinDriver.py
+python AbinDriver.py
 ```
 
 # Create script to open abindebugger
@@ -170,7 +170,7 @@ python3.7 AbinDriver.py
 
 source ~/abindebugger_venv/bin/activate
 cd ~/AbinDebugger
-python3.7 AbinDriver.py
+python AbinDriver.py
 ```
 
 
